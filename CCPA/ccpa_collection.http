@@ -1,0 +1,67 @@
+## Complaince Status Request 
+POST /compliance HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "shaun.austin@careerbuilder.com",
+    "dsar_request_id": "aviral_dsar_id_9",
+    "dsar_action": "status",
+    "jiraId":"Jiratest123",
+    "dsarTicketid": "dsarTest123",
+    "userdid": "userdidTest123"
+}
+
+## Complaince Retrieve Request 
+POST /compliance HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "shaun.austin@careerbuilder.com",
+    "dsar_request_id": "aviral_dsar_id_9",
+    "dsar_action": "retrieve",
+    "jiraId":"Jiratest123",
+    "dsarTicketid": "dsarTest123",
+    "userdid": "userdidTest123"
+}
+
+## Complaince Delete Request 
+POST /compliance HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "shaun.austin@careerbuilder.com",
+    "dsar_request_id": "aviral_dsar_id_10",
+    "dsar_action": "delete",
+    "jiraId":"Jiratest123",
+    "dsarTicketid": "dsarTest123",
+    "userdid": "userdidTest123"
+}
+
+## Complaince Do Not Sell Request 
+POST /compliance HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "dsar_request_id": "aviral_dsar_id_9",
+    "dsar_action": "do-not-sell",
+    "jiraId":"Jiratest123",
+    "dsarTicketid": "dsarTest123",
+    "userdid": "userdidTest123"
+}

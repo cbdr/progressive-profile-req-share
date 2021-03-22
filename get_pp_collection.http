@@ -1,0 +1,307 @@
+https://google.com/
+
+## Auto Complete Request 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{ 
+	"query": "query Autocomplete($Data: String!, $limit: Int!) { Autocomplete(Data: $Data, limit: $limit) { Email } }",
+"variables": { "Data": "Shivani", "limit": 20 } 
+	
+}
+
+## Get Profile Request 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfile($userDID: String!) { getProfile(userDID: $userDID) { Email RealName JobTitle UserDID CreatedDateTime LastActivity CountApply CountResume LastEmailAction CountEmailActions LastResume LastApply CountView LastView CountSearch LastSearch CountVisit LastActivity Status Address { Address CityName StateName PostalCode CountryCode Phone Updated } MailPref { HostSite AllowHeadhunter AllowPartner Created } } }",
+    "variables": {
+        "userDID": "U2Z0YN6M6GKG078999V"
+    }
+}
+
+## Get Profile With Email Request
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfile($email: String!) { getProfile(email: $email) { Email RealName JobTitle UserDID CreatedDateTime LastActivity CountApply CountResume LastEmailAction CountEmailActions LastResume LastApply CountView LastView CountSearch LastSearch CountVisit LastActivity Status Address { Address CityName StateName PostalCode CountryCode Phone Updated } MailPref { HostSite AllowHeadhunter AllowPartner Created } } }",
+    "variables": {
+        "email": "rajm83148@gmail.com"
+    }
+}
+
+## Get Profile Preferences
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfilePref($email: String!, $Key: String!) { getProfilePref(email: $email, Key: $Key) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": ""
+    }
+}
+
+## Get Applications
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileApplications($email: String!, $limit: Int!, $offset: Int!) { getProfileApplications(email: $email, limit: $limit, offset: $offset) { Applications { JobDID HostSite SiteProperty JobTitle CompanyName ApplyDateTime } CountApply } }",
+    "variables": {
+        "email": "ridgewilliams23@ymail.com",
+        "limit": 10,
+        "offset": 10
+    }
+}
+
+## Get Profile Search
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileSearch($email: String!, $limit: Int!, $offset: Int!) { getProfileSearch(email: $email, limit: $limit, offset: $offset) { Searches { SearchDateTime HostSite SiteProperty SearchAlgo Location Keywords SearchType SearchJobs { Jobs } } CountSearch } }",
+    "variables": {
+        "email": "bearnewell@gmail.com",
+        "limit": 10,
+        "offset": 0
+    }
+}
+
+## Get Profile Email Actions
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileEmailActions($email: String!, $limit: Int!, $offset: Int) { getProfileEmailActions(email: $email, limit: $limit,offset :$offset) { ActionMonth  EmailCampaign EmailTemplate Sender }}",
+    "variables": {
+        "email": "bearnewell@gmail.com",
+        "limit": 2,
+        "offset": 4
+    }
+}
+
+## Get Profile Resume Searches 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileResumeSearches($email: String!, $limit: Int, $offset: Int) { getProfileResumeSearches(email: $email,limit: $limit,offset:$offset) { SearchDate SearchTerms } }",
+    "variables": {
+        "email": "j.hopmann@gmail.com",
+        "offset": 0,
+        "limit": 10
+    }
+}
+
+## Get Profile VisitorIDs 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileVisitorIDs($email: String!) { getProfileVisitorIDs(email: $email) { VisitorID LastUsed } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net"
+    }
+}
+
+## Get Profile Interests 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileInterests($email: String!,$limit: Int, $offset: Int) { getProfileInterests(email: $email,limit: $limit,offset:$offset) { CompanyName RecruiterName CompanyDID NumJobs Location Industry CompanyDesc CompanyLogo ActionCount LastAction } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "offset": 0,
+        "limit": 10
+    }
+}
+
+## Get Profile Resumes With Education and Experience 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileResumesWithExpAndEdu($email: String!, $limit: Int!) { getProfileResumesWithExpAndEdu(email: $email, limit: $limit) { Resumes { ResumeDID ResumeStatus ResumeTitle MostRecentJobTitle PostingPath Added IsDefault Experience { ResumeDID Sequence JobTitle JobDesc CompanyName EmploymentType StartDate EndDate } Education { ResumeDID SchoolName DegreeType Major DegreeDate AttendStart AttendEnd } } CountResume } }",
+    "variables": {
+        "email": "bearnewell@gmail.com",
+        "limit": 3
+    }
+}
+
+## Get Resumes 
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileResumes($email: String!, $limit: Int!, $offset: Int!) { getProfileResumes(email: $email, limit: $limit, offset: $offset) { Resumes { ResumeDID ResumeStatus ResumeTitle MostRecentJobTitle PostingPath Added } CountResume } }",
+    "variables": {
+        "limit": 10,
+        "offset": 0
+    }
+}
+
+## Get Talent Networks Joined
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileTalentNetwork($email: String!, $limit: Int!, $offset: Int!) { getProfileTalentNetwork(email: $email, limit: $limit, offset: $offset) { TnDID Added } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "limit": -1,
+        "offset": 0
+    }
+}
+
+## Get Profile Saved Jobs
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileSavedJobs($email: String!, $limit: Int!, $offset: Int!) {getProfileSavedJobs(email: $email, limit: $limit, offset: $offset) { JobDID JobTitle CompanyName Location Saved }}",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "limit": -1,
+        "offset": 0
+    }
+}
+
+## Get Profile Resume Base 64
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileResumeBase64($email: String!) { getProfileResumeBase64(email: $email) { base64 } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net"
+    }
+}
+
+## Get Cover Letter
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileCoverLetters($email: String!, $limit: Int!) { getProfileCoverLetters(email: $email, limit: $limit) { LetterName LetterText Changed } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "limit": -1
+    }
+}
+
+## Get Application History Base 64
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+
+{
+    "query": "query getProfileApplicationHistoryBase64($email: String!) { getProfileApplicationHistoryBase64(email: $email) { base64 } }",
+    "variables": {
+        "email": "michael.villarreal@careerbuilder.com"
+    }
+}
+
+## Get Profile Stats
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+
+{
+    "query": "query getProfileStats($email: String, $days: Int) { getProfileStats(email: $email, days: $days) { Searches Jobs Applications Views }}",
+    "variables": {
+        "email": "akanksha.agrawal.cb@gmail.com",
+        "days": 70
+    }
+}
+
+## Get Profile Privacy
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+
+{
+    "query": "query getProfilePrivacy($email: String!) { getProfilePrivacy(email: $email) { Email RealName JobTitle UserDID Status } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net"
+    }
+}

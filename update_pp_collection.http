@@ -1,0 +1,479 @@
+## Update Skills
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "bearnewell@gmail.com",
+        "Key": "skills",
+        "value": "[{\"skill\":\"Software Engineering\", \"exp\": 2}, {\"skill\": \"Coding\", \"exp\": 10 }]"
+    }
+}
+
+## Update Relocation Preferences
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "relocate",
+        "value": "1"
+    }
+}
+
+## Update Drivers License
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "drivers_license",
+        "value": "1"
+    }
+}
+
+## Update Desired Locations
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "desired_locations",
+        "value": "[{ \"city\": \"Duluth\", \"state\": \"GA\", \"postal\": \"30097\", \"country\": \"US\", \"work_status\": \"test\" }]"
+    }
+}
+
+## Update Desired Job Titles
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "desired_job_titles",
+        "value": "Software Engineer, writer"
+    }
+}
+
+## Update Current Job Title
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "current_job_title",
+        "value": "\"Software Engineer\""
+    }
+}
+
+## Update Desired Salary
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "desired_salary",
+        "value": "[{\"income_pay\":\"5000\",\"income_type\":\"hourly\", \"income_currency\": \"USD\"}]"
+    }
+}
+
+## Update Certifications
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "certifications",
+        "value": "[{\"name\": \"tst\"}]"
+    }
+}
+
+## Update Languages
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "languages",
+        "value": "[{\"lang\": \"LAEN\", \"prof\": \"LP02\"}]"
+    }
+}
+
+## Update Availability
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "availability",
+        "value": "1"
+    }
+}
+
+## Update Commute Method
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "target_commute_method",
+        "value": "\"car\""
+    }
+}
+
+## Update Commute Time
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "target_commute_time",
+        "value": "15"
+    }
+}
+
+## Update Employment
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "employment_type",
+        "value": "[\"ETPD\",\"ETPD\"]"
+    }
+}
+
+## Update Work Auth
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "work_auth",
+        "value": "{\"countrycode\":\"US\",\"status\":\"GreenCard Holder\"}"
+    }
+}
+
+## Update Nations
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "nationality",
+        "value": "\"United States\""
+    }
+}
+
+## Update Commute
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "commute",
+        "value": "{\"maxcommute\": \"50\", \"commutetype\": \"type\", \"targetcommute\": \"target\"}"
+    }
+}
+
+
+## Update Social Networks
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "facebook",
+        "value": "\"Facebook\""
+    }
+}
+
+
+## Update Security
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "security",
+        "value": "{\"security_level\": \"idk\", \"security_clearance\": \"idk\"}"
+    }
+}
+
+## Update Recent Pay
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "recent_pay",
+        "value": "{\"pto\": \"pto\", \"401k\": \"401k\", \"dentalins\": \"dentalins\", \"healthins\": \"healthins\", \"income_pay\": \"income pay\", \"income_type\": \"income type\", \"income_bonus\": \"income bonus\", \"income_other\": \"income other\", \"income_currency\": \"income currency\", \"income_commission\": \"income commission\"}"
+    }
+}
+
+## Update Military
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "military",
+        "value": "\"None\""
+    }
+}
+
+## Update Management Experience
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "mgmt_exp",
+        "value": "{\"mgmt\": \"keyz\", \"how_many\": \"how many\"}"
+    }
+}
+
+## Update Relocate Abroad
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "reloc_abroad",
+        "value": "1"
+    }
+}
+
+
+## Update Travel
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "travel",
+        "value": "\"Travel\""
+    }
+}
+
+
+## Update Summary
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "summary",
+        "value": "\"My Summary\""
+    }
+}
+
+
+## Update Default Resume
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "default_resume",
+        "value": "\"ARDL1S36SXTTYMTCQFK1\""
+    }
+}
+
+
+## Update Resume Visibility
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updateEachResumeVisibility($profileID: Int, $resumeDID: String, $status: String) { updateEachResumeVisibility(profileID: $profileID,resumeDID :$resumeDID, status:$status) { ProfileID,ResumeDID, Status }}",
+    "variables": {
+        "profileID": 6,
+        "resumeDID": "RD83325YXZFBK0M5P89",
+        "status": "Private"
+    }
+}
+
+## Update Resume Visibility BY Email
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updateEachResumeVisibilityByEmail($email: String, $status: String) { updateEachResumeVisibilityByEmail(email: $email, status:$status) { ResumeDID ResumeStatus ResumeTitle MostRecentJobTitle PostingPath Added }}",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "status": "Private"
+    }
+}
+
+## Update Resume Visibility BY Email
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updateProfilePrivacy($email: String, $status: String) { updateProfilePrivacy(email: $email, status:$status) { Email RealName JobTitle UserDID Status }}",
+    "variables": {
+        "email": "akanksha.agrawal.cb@gmail.com",
+        "status": "Public"
+    }
+}
