@@ -1,0 +1,144 @@
+##Create Resume
+POST /resume/create HTTP/1.1
+Host: localhost:8081
+Content-Type: application/xml
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+  <DeveloperKey>WDHS4X66F41HLNV4QTX2</DeveloperKey>
+  <ExternalID></ExternalID>
+  <Test>false</Test>
+  <ExternalUserID>XR2W03Q5VKX2X18R907C</ExternalUserID>
+  <Title>Software Engineer</Title>
+  <ResumeText>steve
+jobs                                                                3435 Mission Avenue, Carmichael, California
+                                                                                                test21@gmail.com
+
+
+
+
+Education
+                         Harvard University                                                           2016/01 -
+                         Computer
+
+                         Currently completing courses in computer science, robotics and statistics
+
+                         Volunteered on a monthly basis to prepare meals at the local community food bank
+
+                         Graduated summa cum laude-3.7+ GPA
+
+
+
+
+Skill
+                           Javascript                                       JAVA
+
+
+                           Mysql                                            HTML
+
+
+                           Jquery
+
+
+
+
+Experience
+                         Infosys                                                               2018/01 - Present
+                         Software Engineer * CA
+
+                         Softare devloeent ,deployment,security management using SIteminder
+
+
+
+
+Languages
+                           English                                          Spanish
+
+
+                           Hindi                                            Chinese
+
+
+                           French
+
+</ResumeText>
+  <Visibility>Public</Visibility>
+  <HostSite>US</HostSite>
+  <CustomValues>
+    <CustomValue>
+      <Key>EXP_MNS</Key>
+      <Value>29</Value>
+    </CustomValue>
+    <CustomValue>
+      <Key>DESIRED_OPPORTUNITY</Key>
+      <Value></Value>
+    </CustomValue>
+  </CustomValues>
+  <Relocations>
+    <Relocation>
+      <WorkStatus>ctns</WorkStatus>
+      <Country>US</Country>
+      <State></State>
+      <City></City>
+      <Zipcode></Zipcode>
+    </Relocation>
+  </Relocations>
+  <ShowContactInfo>true</ShowContactInfo>
+  <DesiredJobTypes>ETFT</DesiredJobTypes>
+  <CompanyExperiences>
+    <CompanyExperience>
+      <CompanyName>cbdev</CompanyName>
+      <JobTitle>Software Engineer</JobTitle>
+      <StartDate>2018-01-01</StartDate>
+      <EndDate>1970-01-01</EndDate>
+      <Details>Softare deployment,security management  </Details>
+    </CompanyExperience>
+  </CompanyExperiences>
+  <Educations>
+    <Education>
+      <SchoolName>Harvard University</SchoolName>
+      <DegreeCode>CE3</DegreeCode>
+      <Major>Computer</Major>
+      <GraduationDate>2016-01-31</GraduationDate>
+    </Education>
+  </Educations>
+  <Languages></Languages>
+</Request>
+
+
+##Upload Resume
+
+POST /resume/upload?DeveloperKey= 'WDHS4X66F41HLNV4QTX2'&ExternalID= 'XR2Y5SD6V9QTXD5DHKZD'&ExternalUserID= 'XR305M97592T2SH8LWK3'&FileName= 'resume.pdf'&HostSite= 'US'&Test= 'false'HTTP/1.1
+Host: localhost:8081
+Content-Type: application/pdf
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+< ../images/resume.pdf
+
+
+##Delete Resume
+
+
+POST /resume/delete HTTP/1.1
+Host: localhost:8081
+Content-Type: application/xml
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+  <DeveloperKey>WDHS4X66F41HLNV4QTX2</DeveloperKey>
+  <ExternalID>XR2N2685XBPPCHQM2J14</ExternalUserID>
+  
+  <ExternalUserID>XR2W03Q5VKX2X18R907C</ExternalUserID>
+  <Test>false</Test>
+</Request>
+
+##List Resume
+
+GET http://localhost:8081/resume/ownall?DeveloperKey=WDHS4X66F41HLNV4QTX2&OutputJson=true&ExternalUserID=XR2W03Q5VKX2X18R907C&HostSite=US HTTP/1.1

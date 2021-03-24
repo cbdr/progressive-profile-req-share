@@ -1,6 +1,6 @@
 {"rest-client.environmentVariables": {
     "local": {
-        "authorization": "",
+        "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmcm9udGVuZCJ9.8uKgl0I2_GVqUTkjuecehiwEYx9VlbZEN3AmTt5fpKc",
     },
     "production": {
     }

@@ -1,0 +1,114 @@
+
+#Create Profile
+POST /createProfile HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jerry@gmail2.com",
+    "externalUserDID": "XRCM6BC5X136BFQRSWL2",
+    "userDID": "UPR3RY73K3FVYC50DV13",
+    "firstName": "Jerry",
+    "lastName": "Dummy",
+    "address": "India"
+}
+
+##Update Profile
+
+POST /updateProfile HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+  "desired_title": "Senior Software Engineer",
+  "first_name": "Jon",
+  "last_name": "Molinaro",
+  "location": "Roswell, GA",
+  "email": "ty1@gmail.com",
+  "phone": "1(678) 799-1941",
+  "work_experience": [
+    {
+      "company_name": "CareerBuilder LLC",
+      "job_title": "Senior Software Engineer",
+      "start_date": "6/01/2005",
+      "end_date": "0/0/00",
+      "currently_employed_here": true,
+      "activities": [
+        "did things",
+        "did more things",
+        "took care of stuff"
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "school_name": "DeVry University",
+      "major": "Network Systems Administration",
+      "degree": "Associates",
+      "body": "GPA",
+      "graduation_date": "05/30/2005"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "LAEN",
+      "prof": "LP01"
+    }
+  ],
+  "skills": [
+    {
+      "skill": "Computer science",
+      "exp": "1"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Computer science"
+    }
+  ],
+  "summary":"SDFDSf",
+  "social_network" :[
+      {
+          "facebook":"www.facebook.com",
+          "twitter":"www.facebook.com",
+          "linkedin":"www.facebook.com",
+          "other":"www.facebook.com"
+      }
+  ],
+  "about_me": [
+    {
+      "military": 1,
+      "mgmt_exp": {"exp": 4, "mgmt": ""},
+      "drivers_license": 1,
+      "security": {"security_level": "1", "security_clearance": ""}
+    }
+  ],
+  "interest": [
+    {
+      "name": "Computer science"
+    },
+    {
+        "name": "dshfkjds"
+    }
+  ]
+}
+
+##Delete Profile
+
+POST /deleteProfile HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+  
+  "email": "apicreateprofileunit@gmail.com"
+}

@@ -1,0 +1,50 @@
+##Upload Document
+
+POST /documents/jeffryalobb@verizon.net/Presentation HTTP/1.1
+Host: localhost:8081
+Content-Type: multipart/form-data;
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Disposition: form-data; name="upload"; filename="resume.pdf"
+
+<../ images/resume.pdf>
+
+##Download Documenmt
+
+GET http://localhost:8081/resume/ownall?DeveloperKey=WDHS4X66F41HLNV4QTX2&OutputJson=true&ExternalUserID=XR2W03Q5VKX2X18R907C&HostSite=US HTTP/1.1
+
+##Delete Profile Document
+
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation deleteDocument($email: String, $fileId : String) { deleteDocument(email: $email, fileId: $fileId) { TypeCode FileName FileID FileStatus Extension FileSize Updated }}",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "fileId": "c0ef25c5-bc35-11ea-aa3c-0e9a88aa04a1"
+    }
+}
+
+
+##Get Profile Document
+
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "query getProfileDocumentsList($email: String, $limit: Int, $offset: Int) { getProfileDocumentsList(email: $email,limit: $limit,offset:$offset) { TypeCode FileName FileID FileStatus Extension FileSize Updated }}",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "offset": 0,
+        "limit": 10
+    }
+}
