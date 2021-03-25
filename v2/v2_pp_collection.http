@@ -1,0 +1,363 @@
+## Get Profile Application
+POST /v2/profileApplications HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"bearnewell@gmail.com"}
+
+
+## Get Profile With Email
+
+POST /v2/profileDetail HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+##Get Profile Preferences
+
+POST /v2/profilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Profile Searches
+
+POST /v2/profileSearch HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Profile Email Actions
+
+POST /v2/profileEmailActions HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"bearnewell@gmail.com"}
+
+##Update Profile Pref
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "skills",
+    "value": "[{\"skill\":\"Software Engineering\", \"exp\": 2},{\"skill\": \"\t Agile,Scrum\", \"exp\": 10 }]"
+}
+
+##Get Profile Resumes
+
+POST /v2/profileResumes HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Profile Resume Searches
+
+POST /v2/profileResumeSearches HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"bearnewell@gmail.com"}
+
+
+##Get Profile Visitor IDs
+
+POST /v2/profileVisitorIds HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Talent Networks Joined
+
+POST /v2/profileTalentNetwork HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Profile  Interests 
+
+POST /v2/profileInterests HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Profile Resumes With Education & Experience
+
+POST /v2/profileResumesWithExpnEdu HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"jeffryalobb@verizon.net"}
+
+
+##Get Profile Saved Jobs
+
+POST /v2/profileSavedJobs HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"bearnewell@gmail.com"}
+
+
+##Get Cover Letter
+
+POST /v2/profileCoverLetter HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{"email":"bearnewell@gmail.com"}
+
+##Get Saved Jobs TN
+
+POST /v2/profileSavedJobsTN HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "sureshmahar_g@yahoo.co.in",
+    "TNDID": "TN8169T5XGKQ56KVFCYP",
+    "limit": -1,
+    "offset": 0
+}
+
+
+##Get Profile Document
+
+POST /v2/profileDocuments HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "limit": -1,
+    "offset": 0
+}
+
+
+##Auto Complete 
+
+POST /v2/profileDocuments HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "shivani",
+    "limit": 20,
+    "offset": 0
+}
+
+
+##Get Profile Stats
+
+POST /v2/profileStat HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "bearnewell@gmail.com",
+    "days": 70
+}
+
+##Get Profile History Base64
+
+POST /v2/profileApplicationHistoryPDF HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "dcruise923@gmail.com"
+}
+
+##Get Profile Resume Base64
+
+POST /v2/profileResumePDF HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "bearnewell@gmail.com"
+}
+
+##Update Skills
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "skills",
+    "value": "[{\"exp\": 2, \"skill\": \"Software Engineering\"}, {\"exp\": 10, \"skill\": \"Coding\"}]"
+}
+
+
+##Update Relocation
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "relocate",
+    "value": "1"
+}
+
+##Update Profile Employment
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "employment_type",
+    "value": "[\"ETPD\",\"ETPD\"]"
+}
+
+##Update Driver License
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "drivers_license",
+    "value": "1"
+}
+
+
+##Update Desired Location
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "desired_locations",
+    "value": "[{ \"city\": \"Duluth\", \"state\": \"GA\", \"postal\": \"30097\", \"country\": \"US\", \"work_status\": \"test\" }]"
+}
+
+##Update Current Job  detail
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "current_job_title",
+    "value": "\"Software Engineer\""
+}
+
+
+##Update Work Exp
+
+POST /v2/updateProfilePref HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "key": "work_history1",
+    "value": "{\"end_date\": \"1000-01-01\", \"job_desc\": \"azeaze%0D%0Aaze%0D%0Aaze%0D%0Ad %27agobert\", \"job_title\": \"Développeur bis\", \"is_current\": 1, \"start_date\": \"2010-01-01\", \"company_name\": \"NET, CareerBuilder\"}"
+}
