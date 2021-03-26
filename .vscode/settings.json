@@ -1,6 +1,6 @@
 {"rest-client.environmentVariables": {
     "local": {
-        "authorization": "", //add auth token here 
+        "authorization": "", //add auth token here
     },
     "production": {
     }

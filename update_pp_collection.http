@@ -462,7 +462,7 @@ Content-Length: 171
     }
 }
 
-## Update Resume Visibility BY Email
+## Update Profile Privacy
 POST /graphql HTTP/1.1
 Host: localhost:8081
 Content-Type: application/json
@@ -477,3 +477,45 @@ Content-Length: 171
         "status": "Public"
     }
 }
+
+## Update Education History
+
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }",
+    "variables": {
+        "email": "jeffryalobb@verizon.net",
+        "Key": "education1",
+        "value": "{\"major\": \"Computer\", \"degree\": \"None\", \"school\": \"U.S. Naval Academy Prep Bainbridge, MD\", \"degree_code\": \"CE3\", \"graduation_date\": \"25-02-2010\"}"
+    }
+}
+
+
+## Update Remote Work Status
+
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{ "query": "mutation updatePref($email: String, $userDID: String, $Key: String!, $value: String!) { updatePref(email: $email, userDID: $userDID, Key: $Key, value: $value) { PrefCatKey PrefValue ValueType } }", "variables": { "email": "jeffryalobb@verizon.net", "Key": "remote_work", "value": "1" } }
+
+
+## Update Cover letter
+
+POST /graphql HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{ "query": "mutation updateCoverLetter($email: String, $userDID: String, $name: String, $text: String) { updateCoverLetter(email: $email, userDID: $userDID, name: $name, text: $text) { LetterName LetterText Changed } }", "variables": { "email": "jeffryalobb@verizon.net", "name":"dsf", "text":"dsf","userDID":"" } }

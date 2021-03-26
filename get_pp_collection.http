@@ -117,14 +117,8 @@ fromfrontend: true
 Authorization: Bearer {{authorization}}
 Content-Length: 171
 
-{
-    "query": "query getProfileResumeSearches($email: String!, $limit: Int, $offset: Int) { getProfileResumeSearches(email: $email,limit: $limit,offset:$offset) { SearchDate SearchTerms } }",
-    "variables": {
-        "email": "j.hopmann@gmail.com",
-        "offset": 0,
-        "limit": 10
-    }
-}
+{ "query": "query getProfileResumeSearches($email: String!, $limit: Int, $offset: Int) { getProfileResumeSearches(email: $email,limit: $limit,offset:$offset) { SearchDate SearchTerms } }", "variables": { "email": "jeffryalobb@verizon.net" ,"offset":0, "limit":10} }
+
 
 ## Get Profile VisitorIDs 
 POST /graphql HTTP/1.1
@@ -247,13 +241,8 @@ fromfrontend: true
 Authorization: Bearer {{authorization}}
 Content-Length: 171
 
-{
-    "query": "query getProfileCoverLetters($email: String!, $limit: Int!) { getProfileCoverLetters(email: $email, limit: $limit) { LetterName LetterText Changed } }",
-    "variables": {
-        "email": "jeffryalobb@verizon.net",
-        "limit": -1
-    }
-}
+{ "query": "query getProfileEmailActions($email: String!, $limit: Int!, $offset: Int!) { getProfileEmailActions(email: $email, limit: $limit, offset: $offset) {  ActionMonth  EmailCampaign EmailTemplate Sender }}", "variables": { "email": "jeffryalobb@verizon.net", "limit": -1 ,"offset": 0 } }
+
 
 ## Get Application History Base 64
 POST /graphql HTTP/1.1
@@ -264,12 +253,8 @@ Authorization: Bearer {{authorization}}
 Content-Length: 171
 
 
-{
-    "query": "query getProfileApplicationHistoryBase64($email: String!) { getProfileApplicationHistoryBase64(email: $email) { base64 } }",
-    "variables": {
-        "email": "michael.villarreal@careerbuilder.com"
-    }
-}
+{ "query": "query getProfileApplicationHistoryBase64($email: String!) { getProfileApplicationHistoryBase64(email: $email) { base64 } }", "variables": { "email": "bearnewell@gmail.com" } }
+
 
 ## Get Profile Stats
 POST /graphql HTTP/1.1

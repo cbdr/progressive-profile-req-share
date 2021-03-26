@@ -142,3 +142,18 @@ Content-Length: 171
 ##List Resume
 
 GET http://localhost:8081/resume/ownall?DeveloperKey=WDHS4X66F41HLNV4QTX2&OutputJson=true&ExternalUserID=XR2W03Q5VKX2X18R907C&HostSite=US HTTP/1.1
+
+
+## Update Resume Title
+POST /resume/updateTitle HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "jeffryalobb@verizon.net",
+    "resumeDID": "R8G04P757Y4XLTSJZTP",
+    "title": "Hello World!!"
+}

@@ -109,6 +109,16 @@ Authorization: Bearer {{authorization}}
 Content-Length: 171
 
 {
-  
   "email": "apicreateprofileunit@gmail.com"
 }
+
+
+##Download Resume
+
+GET /downloadResume?DeveloperKey=Developerkey&ExternalUserID=ExternalUserID&ExternalID=ExternalID HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
