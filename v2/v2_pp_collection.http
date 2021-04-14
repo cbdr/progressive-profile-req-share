@@ -361,3 +361,16 @@ Content-Length: 171
     "key": "work_history1",
     "value": "{\"end_date\": \"1000-01-01\", \"job_desc\": \"azeaze%0D%0Aaze%0D%0Aaze%0D%0Ad %27agobert\", \"job_title\": \"Développeur bis\", \"is_current\": 1, \"start_date\": \"2010-01-01\", \"company_name\": \"NET, CareerBuilder\"}"
 }
+
+##Get Email Can Posts Jobs
+
+POST /v2/getEmailCanPostJobs HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+fromfrontend: true
+Authorization: Bearer {{authorization}}
+Content-Length: 171
+
+{
+    "email": "info@ibsss.nl"
+}
